@@ -431,7 +431,7 @@ export const siteConfig = {
     },
     {
       imageSrc: "/images/work-three.jpg",
-      category: "LED Lighting",
+      category: "Window Cleaning",
       caption: "Professional window cleaning in the Land O Lakes area",
     },
     {
