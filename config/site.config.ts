@@ -101,6 +101,7 @@ export const siteConfig = {
     eyebrow: "About",
     heading: "Windows, exteriors, and lighting — done right.",
     body: [
+      "H & S Exterior Solutions is firefighter owned and operated.",
       "H & S Exterior Solutions provides window cleaning, pressure washing, and both permanent and seasonal lighting installation across Land O Lakes and the greater Tampa Bay area, founded in 2023.", // confirmed facts, combined
       "As an owner-operated local business, H & S offers one point of contact for exterior cleaning and lighting projects. Request a free quote for service at your Land O Lakes or Tampa Bay property.",
     ],
@@ -109,6 +110,12 @@ export const siteConfig = {
       { value: "2023", label: "Founded" }, // confirmed
       { value: "Tampa Bay", label: "Service Area" },
     ],
+    owner: {
+      name: "Michael Friedmann",
+      role: "Owner & Local Firefighter",
+      heading: "Serving the community, on and off the job.",
+      body: "Owner Michael Friedmann is a firefighter serving the local area. He brings that same commitment to service, care, and responsibility to every H & S Exterior Solutions project.",
+    },
   },
 
   services: [
@@ -128,15 +135,18 @@ export const siteConfig = {
       process: [
         {
           step: "Request a quote",
-          detail: "Share the property location and the windows, screens, frames, or solar panels you would like cleaned.",
+          detail:
+            "Share the property location and the windows, screens, frames, or solar panels you would like cleaned.",
         },
         {
           step: "Confirm the service scope",
-          detail: "Review which surfaces need cleaning and any access considerations before work begins.",
+          detail:
+            "Review which surfaces need cleaning and any access considerations before work begins.",
         },
         {
           step: "Clean the selected surfaces",
-          detail: "The agreed windows and exterior features are cleaned, followed by a visual check of the work area.",
+          detail:
+            "The agreed windows and exterior features are cleaned, followed by a visual check of the work area.",
         },
       ],
       costFactors: [
@@ -171,7 +181,8 @@ export const siteConfig = {
       process: [
         {
           step: "Identify the cleaning area",
-          detail: "Share photos or details about the exterior surface and the type of buildup you want removed.",
+          detail:
+            "Share photos or details about the exterior surface and the type of buildup you want removed.",
         },
         {
           step: "Review the surface",
@@ -180,7 +191,8 @@ export const siteConfig = {
         },
         {
           step: "Complete the cleaning",
-          detail: "The agreed exterior areas are pressure washed and the work area is visually checked afterward.",
+          detail:
+            "The agreed exterior areas are pressure washed and the work area is visually checked afterward.",
         },
       ],
       costFactors: [
@@ -204,7 +216,8 @@ export const siteConfig = {
       number: "03",
       title: "Govee LED Permanent Light Installation", // confirmed
       h1: "Govee LED Permanent Light Installation in Land O Lakes, FL",
-      shortDescription: "Professional installation of Govee permanent exterior LED lighting.",
+      shortDescription:
+        "Professional installation of Govee permanent exterior LED lighting.",
       metaDescription:
         "Govee permanent LED light installation in Land O Lakes, FL by H & S Exterior Solutions. Plan year-round exterior lighting—request a free quote today.",
       description: [
@@ -214,15 +227,18 @@ export const siteConfig = {
       process: [
         {
           step: "Discuss the lighting plan",
-          detail: "Identify the areas you want illuminated and the Govee lighting system planned for the property.",
+          detail:
+            "Identify the areas you want illuminated and the Govee lighting system planned for the property.",
         },
         {
           step: "Review layout and access",
-          detail: "Confirm the intended coverage, mounting path, available power, and any roofline access considerations.",
+          detail:
+            "Confirm the intended coverage, mounting path, available power, and any roofline access considerations.",
         },
         {
           step: "Install the lighting",
-          detail: "The permanent LED system is mounted along the agreed exterior areas and checked after installation.",
+          detail:
+            "The permanent LED system is mounted along the agreed exterior areas and checked after installation.",
         },
       ],
       costFactors: [
@@ -257,15 +273,18 @@ export const siteConfig = {
       process: [
         {
           step: "Plan the display",
-          detail: "Share the property details and the rooflines or exterior areas you want included in the Christmas light display.",
+          detail:
+            "Share the property details and the rooflines or exterior areas you want included in the Christmas light display.",
         },
         {
           step: "Confirm scope and access",
-          detail: "Review the display coverage, installation access, power availability, and removal needs before scheduling.",
+          detail:
+            "Review the display coverage, installation access, power availability, and removal needs before scheduling.",
         },
         {
           step: "Install and remove",
-          detail: "The agreed display is installed for the season and removed according to the confirmed service plan.",
+          detail:
+            "The agreed display is installed for the season and removed according to the confirmed service plan.",
         },
       ],
       costFactors: [
@@ -406,18 +425,18 @@ export const siteConfig = {
   gallery: [
     {
       imageSrc: "/images/work-one.jpg",
-      category: "Windows",
-      caption: "Professional window cleaning in the Land O Lakes area",
+      category: "LED Lighting",
+      caption: "Permanent Govee LED exterior lighting installation",
     },
     {
-      imageSrc: "/images/work-two.jpg",
+      imageSrc: "/images/service-pressure-washing.jpg",
       category: "Pressure Washing",
       caption: "Exterior pressure washing in the Tampa Bay area",
     },
     {
       imageSrc: "/images/work-three.jpg",
       category: "LED Lighting",
-      caption: "Permanent Govee LED exterior lighting installation",
+      caption: "Professional window cleaning in the Land O Lakes area",
     },
     {
       imageSrc: "/images/work-four.jpg",
