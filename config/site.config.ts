@@ -113,6 +113,9 @@ export const siteConfig = {
     owner: {
       name: "Michael Friedmann",
       role: "Owner & Local Firefighter",
+      // Add Michael's photo to public/images, then set this to its path,
+      // for example: "/images/michael-friedmann.jpg"
+      imageSrc: "/images/michael-friedmann.jpg",
       heading: "Serving the community, on and off the job.",
       body: "Owner Michael Friedmann is a firefighter serving the local area. He brings that same commitment to service, care, and responsibility to every H & S Exterior Solutions project.",
     },

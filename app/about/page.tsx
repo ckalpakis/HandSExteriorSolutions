@@ -84,34 +84,35 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="relative flex min-h-64 flex-col justify-between overflow-hidden border-t border-paper/15 bg-surface p-8 md:min-h-full md:border-l md:border-t-0">
-            <svg
-              viewBox="0 0 120 120"
-              className="absolute -right-5 -top-5 h-40 w-40 text-accent/10"
-              aria-hidden="true"
-            >
-              <path
-                d="M60 8 103 25v31c0 27-17 46-43 56C34 102 17 83 17 56V25L60 8Z"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="8"
+          <div className="relative flex min-h-80 flex-col justify-end overflow-hidden border-t border-paper/15 bg-surface md:min-h-full md:border-l md:border-t-0">
+            {siteConfig.about.owner.imageSrc ? (
+              <Image
+                src={siteConfig.about.owner.imageSrc}
+                alt={`${siteConfig.about.owner.name}, owner of ${business.name}`}
+                fill
+                sizes="(min-width: 768px) 256px, 100vw"
+                className="object-cover object-center"
               />
-              <path d="M35 58h50M60 33v50" stroke="currentColor" strokeWidth="8" />
-            </svg>
+            ) : (
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8 text-center text-paper/40">
+                <svg viewBox="0 0 48 48" className="h-12 w-12 text-accent" aria-hidden="true">
+                  <path
+                    d="M12 29v-5c0-7 5-13 12-13s12 6 12 13v5M9 29h30v7H9zM18 11V7h12v4"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <p className="text-xs uppercase tracking-widest">
+                  Add Michael&apos;s photo in site.config.ts
+                </p>
+              </div>
+            )}
 
-            <div className="relative flex h-14 w-14 items-center justify-center border border-accent text-accent">
-              <svg viewBox="0 0 48 48" className="h-8 w-8" aria-hidden="true">
-                <path
-                  d="M12 29v-5c0-7 5-13 12-13s12 6 12 13v5M9 29h30v7H9zM18 11V7h12v4"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent" aria-hidden />
 
-            <div className="relative mt-16">
+            <div className="relative p-8">
               <p className="font-display text-2xl uppercase leading-none">
                 {siteConfig.about.owner.name}
               </p>
