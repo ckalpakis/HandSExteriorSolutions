@@ -39,7 +39,7 @@ type Review = {
 // fabrication, since all 6 towns were explicitly named as served.
 
 export const siteConfig = {
-  siteUrl: "https://hsexteriorsolutions.com", // Inferred from the business name; verify before launch
+  siteUrl: "https://hoseandsqueegee.com", // Inferred from the business name; verify before launch
 
   business: {
     name: "H & S Exterior Solutions", // confirmed (trailing space trimmed)
@@ -48,18 +48,12 @@ export const siteConfig = {
       "Window cleaning, pressure washing, solar panel cleaning, and permanent and seasonal lighting installation in Land O Lakes and the Tampa Bay area.",
     phone: "(813) 727-1148", // confirmed
     phoneHref: "tel:+18137271148", // confirmed
-    // VERIFY — the "Business Email" field was submitted as
-    // "hosesndsqueegee@gmail.com", but the contact's own personal email
-    // field says "hoseandsqueegee@gmail.com" — two different spellings
-    // of what's almost certainly the same address ("Hose and Squeegee").
-    // Confirm the actual correct spelling before this goes live — a
-    // typo'd business email silently loses leads.
-    email: "hosesndsqueegee@gmail.com",
+    email: "hoseandsqueegee@gmail.com", // confirmed
     streetAddress: "", // not given
     city: "Land O Lakes",
     region: "Land O Lakes & the Tampa Bay area", // derived from the real towns they listed as served
     state: "FL",
-    postalCode: "", // VERIFY — not given
+    postalCode: "34637", // VERIFY — not given
     latitude: 28.2214, // Land O Lakes, FL public coordinates (city-level, not company-specific) — VERIFY
     longitude: -82.4581,
     priceRange: "$$",
@@ -71,7 +65,7 @@ export const siteConfig = {
     // LocalBusiness is the other reasonable fallback.
     schemaType: "HomeAndConstructionBusiness",
     socialLinks: {
-      facebook: undefined as string | undefined,
+      facebook: "https://www.facebook.com/hoseandsqueegee",
       instagram: undefined as string | undefined,
       youtube: undefined as string | undefined,
       tiktok: undefined as string | undefined,
@@ -457,7 +451,7 @@ export const siteConfig = {
     },
     {
       q: "How do I get a free quote?",
-      a: "Contact via phone or email — (813) 727-1148, hosesndsqueegee@gmail.com.", // confirmed contact info (see email caveat above)
+      a: "Contact via phone or email — (813) 727-1148, hoseandsqueegee@gmail.com.", // confirmed contact info
     },
     {
       q: "What exterior services does H & S Exterior Solutions offer?",

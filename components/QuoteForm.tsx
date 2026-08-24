@@ -7,6 +7,50 @@ import GhlBookingWidget from "@/components/GhlBookingWidget";
 
 type Status = "idle" | "sending" | "success" | "error";
 
+function formValue(formData: FormData, name: string) {
+  return String(formData.get(name) ?? "").trim();
+}
+
+function buildQuoteMailto(formData: FormData) {
+  const address = [
+    formValue(formData, "street"),
+    formValue(formData, "city"),
+    formValue(formData, "state"),
+    formValue(formData, "zip"),
+  ].filter(Boolean).join(", ");
+  const photos = formData
+    .getAll("photos")
+    .filter((value): value is File => value instanceof File && Boolean(value.name))
+    .map((file) => file.name);
+
+  const lines = [
+    "Hello H & S Exterior Solutions,",
+    "",
+    "I would like a free quote.",
+    "",
+    `Name: ${formValue(formData, "name")}`,
+    `Phone: ${formValue(formData, "phone")}`,
+    `Email: ${formValue(formData, "email")}`,
+    `Service: ${formValue(formData, "service")}`,
+    address ? `Project address: ${address}` : null,
+    formValue(formData, "details")
+      ? `Project details: ${formValue(formData, "details")}`
+      : null,
+    formValue(formData, "source")
+      ? `How I heard about you: ${formValue(formData, "source")}`
+      : null,
+    photos.length
+      ? `Photos selected (please attach manually): ${photos.join(", ")}`
+      : null,
+    formValue(formData, "pageUrl")
+      ? `Submitted from: ${formValue(formData, "pageUrl")}`
+      : null,
+  ].filter((line): line is string => line !== null);
+
+  const subject = `Quote request — ${formValue(formData, "service")}`;
+  return `mailto:${siteConfig.business.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+}
+
 // Shared classes so every input/select/textarea stays visually identical
 // without repeating the same string a dozen times.
 const fieldClass =
@@ -66,6 +110,14 @@ export default function QuoteForm({
     try {
       const res = await fetch("/api/quote", { method: "POST", body: formData });
       if (!res.ok) throw new Error("Request failed");
+      const result = await res.json();
+
+      if (result.delivery === "mailto") {
+        window.location.href = buildQuoteMailto(formData);
+        setStatus("idle");
+        return;
+      }
+
       setStatus("success");
     } catch {
       setStatus("error");

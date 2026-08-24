@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { syncLeadToGhl, LeadInput } from "@/lib/ghl";
+import { isGhlConfigured, syncLeadToGhl, LeadInput } from "@/lib/ghl";
 
 // Basic in-memory rate limit: blocks obvious burst spam without needing
 // Redis for a single-location marketing site. Resets on redeploy — fine
@@ -37,6 +37,13 @@ export async function POST(req: NextRequest) {
 
   if (!name || !email || !phone || !service) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
+  }
+
+  // Let the browser open a prefilled email when this deployment has not
+  // been connected to GHL yet. A mailto must be opened client-side, so the
+  // API reports the delivery method instead of pretending the CRM received it.
+  if (!isGhlConfigured()) {
+    return NextResponse.json({ ok: true, delivery: "mailto" });
   }
 
   let attribution: Record<string, string> = {};
@@ -78,5 +85,5 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: true, ghlSynced: false });
   }
 
-  return NextResponse.json({ ok: true, ghlSynced: true });
+  return NextResponse.json({ ok: true, delivery: "ghl", ghlSynced: true });
 }

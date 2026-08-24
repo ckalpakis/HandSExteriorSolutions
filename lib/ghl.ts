@@ -11,6 +11,10 @@ import "server-only";
 const GHL_BASE_URL = "https://services.leadconnectorhq.com";
 const GHL_API_VERSION = "2021-07-28";
 
+export function isGhlConfigured() {
+  return Boolean(process.env.GHL_API_KEY && process.env.GHL_LOCATION_ID);
+}
+
 function ghlHeaders() {
   const apiKey = process.env.GHL_API_KEY;
   if (!apiKey) {
