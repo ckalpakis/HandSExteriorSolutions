@@ -91,7 +91,14 @@ export default async function ServiceLocationPage({
       {/* Hero banner — identical treatment to the plain service page. */}
       <section className="relative overflow-hidden bg-ink text-paper">
         <div className="absolute inset-0">
-          <Image src={service.imageSrc} alt={serviceAlt(service)} fill className="object-cover" priority />
+          <Image
+            src={service.imageSrc}
+            alt={serviceAlt(service)}
+            fill
+            className="object-cover"
+            style={{ objectPosition: service.imagePosition }}
+            priority
+          />
           <div className="absolute inset-0 bg-black/70" />
         </div>
 

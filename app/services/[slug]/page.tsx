@@ -67,7 +67,14 @@ export default async function ServicePage({
           like part of the same site instead of a bolted-on info page. */}
       <section className="relative overflow-hidden bg-ink text-paper">
         <div className="absolute inset-0">
-          <Image src={service.imageSrc} alt={serviceAlt(service)} fill className="object-cover" priority />
+          <Image
+            src={service.imageSrc}
+            alt={serviceAlt(service)}
+            fill
+            className="object-cover"
+            style={{ objectPosition: service.imagePosition }}
+            priority
+          />
           <div className="absolute inset-0 bg-black/70" />
         </div>
 

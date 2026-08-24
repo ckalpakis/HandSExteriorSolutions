@@ -33,6 +33,7 @@ export default function ServicesGrid({
                   alt={serviceAlt(s)}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform"
+                  style={{ objectPosition: s.imagePosition }}
                 />
               </div>
               <span className="text-accent text-sm">{s.number}</span>

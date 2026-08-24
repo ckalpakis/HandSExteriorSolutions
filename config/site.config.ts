@@ -159,6 +159,7 @@ export const siteConfig = {
       recentProject: null as RecentProject | null,
       faq: [] as { q: string; a: string }[],
       imageSrc: "/images/service-window-cleaning.jpg",
+      imagePosition: "center 20%",
     },
     {
       id: "pressure-washing",
@@ -205,6 +206,7 @@ export const siteConfig = {
       recentProject: null as RecentProject | null,
       faq: [] as { q: string; a: string }[],
       imageSrc: "/images/service-pressure-washing.jpg",
+      imagePosition: "center",
     },
     {
       id: "govee-led-lighting",
@@ -251,6 +253,7 @@ export const siteConfig = {
       recentProject: null as RecentProject | null,
       faq: [] as { q: string; a: string }[],
       imageSrc: "/images/service-govee-led.png",
+      imagePosition: "center",
     },
     {
       id: "christmas-light-installation",
@@ -297,6 +300,7 @@ export const siteConfig = {
       recentProject: null as RecentProject | null,
       faq: [] as { q: string; a: string }[],
       imageSrc: "/images/service-christmas-lights.jpg",
+      imagePosition: "center",
     },
   ],
 
