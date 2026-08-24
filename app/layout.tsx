@@ -31,6 +31,11 @@ export const metadata: Metadata = {
   },
   description: siteConfig.business.tagline,
   alternates: { canonical: "/" },
+  icons: {
+    icon: [{ url: siteConfig.business.logoSrc, type: "image/png" }],
+    shortcut: [{ url: siteConfig.business.logoSrc, type: "image/png" }],
+    apple: [{ url: siteConfig.business.logoSrc, type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     siteName: siteConfig.business.name,
