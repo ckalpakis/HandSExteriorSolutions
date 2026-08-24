@@ -66,6 +66,46 @@ export default function AboutPage() {
           this page's one H1, so About's own heading is demoted to h2. */}
       <About headingLevel="h2" />
 
+      <section className="bg-paper px-6 pb-20" aria-labelledby="family-heading">
+        <div className="mx-auto grid max-w-6xl overflow-hidden border border-ink/15 bg-white shadow-[10px_10px_0_0_#0088f7] md:grid-cols-[minmax(0,1.35fr)_minmax(20rem,0.65fr)]">
+          <div className="relative min-h-[20rem] overflow-hidden sm:min-h-[28rem] md:min-h-[32rem]">
+            <Image
+              src={siteConfig.about.family.imageSrc}
+              alt={`${business.name} family`}
+              fill
+              sizes="(min-width: 768px) 65vw, 100vw"
+              className="object-cover object-center"
+            />
+            <div
+              className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink/40 to-transparent md:hidden"
+              aria-hidden
+            />
+          </div>
+
+          <div className="relative flex flex-col justify-center border-t border-ink/15 p-8 sm:p-10 md:border-l md:border-t-0 md:p-12">
+            <span
+              className="absolute right-8 top-8 font-display text-7xl leading-none text-accent/10"
+              aria-hidden
+            >
+              H&amp;S
+            </span>
+            <p className="relative flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-accent">
+              <span className="inline-block h-px w-6 bg-accent" aria-hidden />
+              Our foundation
+            </p>
+            <h2
+              id="family-heading"
+              className="relative mt-4 font-display text-4xl uppercase leading-none sm:text-5xl"
+            >
+              {siteConfig.about.family.heading}
+            </h2>
+            <p className="relative mt-6 text-base leading-relaxed text-ink/75">
+              {siteConfig.about.family.body}
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="bg-ink px-6 py-20 text-paper" aria-labelledby="owner-heading">
         <div className="mx-auto grid max-w-4xl overflow-hidden border border-paper/15 md:grid-cols-[minmax(0,1fr)_16rem]">
           <div className="p-8 sm:p-10 md:p-12">

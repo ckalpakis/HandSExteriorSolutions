@@ -103,6 +103,11 @@ export const siteConfig = {
       { value: "2023", label: "Founded" }, // confirmed
       { value: "Tampa Bay", label: "Service Area" },
     ],
+    family: {
+      heading: "Family Owned",
+      body: "Our values guide every aspect of our work, ensuring trustworthy and reliable cleaning services. With us, you receive dedicated service rooted in integrity and care for your home and community.",
+      imageSrc: "/images/about-family.jpg",
+    },
     owner: {
       name: "Michael Friedmann",
       role: "Owner & Local Firefighter",
