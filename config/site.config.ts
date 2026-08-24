@@ -100,7 +100,6 @@ export const siteConfig = {
       "As an owner-operated local business, H & S offers one point of contact for exterior cleaning and lighting projects. Request a free quote for service at your Land O Lakes or Tampa Bay property.",
     ],
     stats: [
-      { value: "4", label: "Core Services" },
       { value: "2023", label: "Founded" }, // confirmed
       { value: "Tampa Bay", label: "Service Area" },
     ],
