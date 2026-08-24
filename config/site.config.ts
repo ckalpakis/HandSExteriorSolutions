@@ -442,7 +442,50 @@ export const siteConfig = {
     },
   ],
 
-  reviews: [] as Review[],
+  reviews: [
+    {
+      quote:
+        "Outstanding outdoor lighting installation! Clean, professional work and beautiful results. Our home looks amazing at night, and Michael clearly knew what he was doing. Highly recommend.",
+      author: "K P",
+      rating: 5,
+      source: "Google",
+    },
+    {
+      quote:
+        "Michael always does excellent work. He recently installed my new Govee lights and did a fantastic job, he’s detail-oriented, efficient, and gets the job done right. He’s also true to his word and always shows up when he says he will. Highly recommend!",
+      author: "Josie Alvarez",
+      rating: 5,
+      source: "Google",
+    },
+    {
+      quote:
+        "Michael did a great job! He cleaned up my gutters & soffit before installing these lights. I’ve been debating getting these lights but I’m so glad I did!",
+      author: "Beth Bluemke",
+      rating: 5,
+      source: "Google",
+    },
+    {
+      quote:
+        "Michael was very responsive, professional and dependable. He came right on time, got the job done and it looks great! I would highly recommend using him if you are looking to have your holiday lights hung the right way, right away!",
+      author: "Timothy OToole",
+      rating: 5,
+      source: "Google",
+    },
+    {
+      quote:
+        "Highly recommend 10/10!!! Michael was punctual, extremely hard working, and very professional. He did all of our windows in our house and power washed our driveway and walkways. He did an amazing job. Haven’t seen them so clean since we moved in. Look no further, he’s your guy. I will be using his services from now on. Thank you!",
+      author: "Quint Mojzak",
+      rating: 5,
+      source: "Google",
+    },
+    {
+      quote:
+        "Great price. Fantastic work!!! I cannot thank Michael enough—being a widow it’s hard to keep up the house alone… he’s so dependable and nice—he even fixed my outdoor electrical!!! Thank you again!",
+      author: "Lisa Rudewicz",
+      rating: 5,
+      source: "Google",
+    },
+  ] as Review[],
 
   faq: [
     {
